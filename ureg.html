@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USER REGISTRATION</title>
+</head>
+<body>
+<form action="reg" method="post">
+     {% csrf_token %}
+    <div style="text-align:center">
+    Name  :    <input type="text" name="name"><br><br>
+    Email :   <input type="text" name="email"><br><br>
+    Phone :   <input type="text" name="phone"><br><br>
+    Address : <input type="text" name="address"><br><br>
+    Uname :<input type="uname" name="uname"><br><br>
+    Password :<input type="password" name="password"><br><br>
+    Confirm password :<input type="password" name="cpass"><br><br>
+    <input type="submit" name="reg" value="REGISTER">
+     </div>
+</form>
+
+</body>
+</html>
