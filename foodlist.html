@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>foodlist</title>
+</head>
+<body>
+<div style="text-align:center"
+<h3><b></b>ANNA'S RESTURANT</b></h3>
+</div>
+Food name: <form action="ser" method="post">
+     {% csrf_token %}
+     <!--<select name="id">{% for i in d %}
+         <option value="{{i.id}}">{{i.food}}</option>
+         {% endfor %}
+     </select>-->
+    <input type="text" name="food">
+    <input type="submit"  value="Search"><br><br><br><br>
+ </form>
+ <table class="center" border="1" align="center">
+
+        <tr>
+            <th>FOOD NAME</th>
+            <th>PRICE</th>
+            <th>DESCRIPTION</th>
+            <th>CATEGORY</th>
+            <th>PHOTO</th>
+        </tr>
+     {% for i in d %}
+        <tr>
+
+
+            <form action="fooddetails" method="post">
+                {% csrf_token %}
+            <td>{{ i.food }}</td>
+            <td>{{ i.price }}</td>
+            <td>{{ i.description }}</td>
+            <td>{{ i.category }}</td>
+            <td><img src="{{ i.photo.url }}" height="100" width="100"></td>
+            <input type="hidden" value="{{i.id}}" name="id">
+            <td> <a href="fooddetails"><input type="submit" name="VIEW" value="VIEW"></a></td>
+                </form>
+            </tr>
+                {% endfor %}
+
+
+
+
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table booking</title>
+</head>
+<body>
+<form action="tablereservation" method="POST">
+    {% csrf_token %}
+<div style="text-align:center">
+    <h1>ANNA'S RESTURANT</h1>
+    <h2>Please fill in this form reserve a table </h2>
+HOW MANY GUESTS:<input type="text" name="guest" placeholder="How many guests"><br><br>
+EMAIL :<input type="text" name="email" placeholder="email"><br><br>
+USERNAME:<input type="text" name="username" placeholder="username"><br><br>
+DATE:<input type="date" name="date" placeholder="date"><br><br>
+TIME:<input type="datetime-local" name ="time" placeholder="datetime"><br><br>
+<input type="submit" name ="makeyourbooking" value="MAKE YOUR BOOKING">
+</div>
+    </form>
+</body>
+</html>

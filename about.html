@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about</title>
+</head>
+<body>
+{% for i in data %}
+
+        <form action="det" method="post">
+                {% csrf_token %}
+
+            <h2>{{i.food}}</h2>
+            <img src="{{i.photo.url}}" height="150" width="150">
+            <input type="hidden" value="{{i.id}}" name="id">
+            <input type="submit" value="more details">
+        </form>
+{% endfor %}
+</body>
+</html>

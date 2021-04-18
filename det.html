@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>details</title>
+</head>
+<body>
+
+<center>
+    <h2>ANNA'S RESTURANT</h2>
+<table class="center" border="1px">
+        <tr>
+
+            <th>FOOD</th>
+            <th>PRICE</th>
+            <th>DESCRIPTION</th>
+            <th>CATEGORY</th>
+            <th>photo</th>
+
+        </tr>
+
+            {% for i in data %}
+
+
+         <tr>
+
+            <td>{{i.food}}</td>
+            <td>{{i.price}}</td>
+            <td>{{i.description}}</td>
+            <td>{{i.category}}</td>
+            <td><img src="{{i.photo.url}}" height="150" width="150"></td>
+
+
+
+
+        </tr>
+        {% endfor %}
+    </table>
+    </center>
+
+</body>
+</html>

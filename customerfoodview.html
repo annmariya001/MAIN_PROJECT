@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UHOME</title>
+    <style>
+        table,th,td{
+            border:2px solid black;
+            }
+         table.center{
+             margin-left: auto;
+             margin-right: auto;
+             width: 1000px;
+             }
+    </style>
+</head>
+<body>
+<h1>food</h1>
+    <table class="center">
+        <tr>
+            <th>FOOD NAME</th>
+            <th>PRICE</th>
+            <th>DESCRIPTION</th>
+            <th>CATEGORY</th>
+            <th>PHOTO</th>
+        </tr>
+        <tr>
+            {% for i in f %}
+            <td>{{ i.food }}</td>
+            <td>{{ i.price }}</td>
+            <td>{{ i.description }}</td>
+            <td>{{ i.category }}</td>
+            <td><img src="{{ i.photo.url }}" height="50" width="50"></td>
+
+        </tr>
+            {% endfor %}
+
+    </table>
+
+</body>
+</html>

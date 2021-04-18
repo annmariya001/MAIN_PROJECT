@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FoodCategoryRegistration</title>
+</head>
+<body>
+<form action="fcategories" method="post">
+     {% csrf_token %}
+    <div style="text-align:center">
+        <h1>ANNA'S RESTURANT</h1>
+     CATEGORY: <input type="text" name="category"><br><br>
+        <input type="submit" name="ADD" value="ADD">
+    </div>
+</form>
+</body>
+</html>

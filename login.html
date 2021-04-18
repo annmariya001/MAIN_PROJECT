@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>LOGIN</title>
 </head>
 <body>
 <div style="text-align:center">
-    <h1><b>LOGIN</b></h1>
+    <a href="home"><input type="submit" name="home" value="HOME"></a>
+</div>
+<div class="container p-3 my-3 bg-dark text-white">
+<div style="text-align:center">
+    <h1><b>ANNA'S RESTURANT</b></h1>
 <form action="log" method="post">
     {% csrf_token %}
-    Username : <input type="text" name="uname"><br>
-    Password : <input type="password" name="password"><br>
-    <input type="submit" name="login">
+    <div class="container-sm border"><br>
+<div class="container">
+<div class="col" style="background-color:white;">
+    <div class="form-group">
+      <div style="text-align:left">
+      <label for="username"><b>USERNAME:</b></label>
+      <input type="text" id="username" name="username" class="form-control"  placeholder="Enter Username">
+      </div></div>
+      <div class="form-group">
+      <div style="text-align:left">
+      <label for="password"><b>PASSWORD:</b></label>
+      <input type="password" id="password" name="password" class="form-control"  placeholder="Enter Password">
+      </div></div>
+    <input type="submit" name="login" value="LOGIN">
+</div></div></div></div>
 </form>
 </body>
 </html>

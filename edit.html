@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EDIT</title>
+</head>
+<body>
+<form action="update" method="post">
+     {% csrf_token %}
+    <div style="text-align:center">
+        <input type="hidden" value="{{data.id}}" name="id">
+    FOOD :  <input type="text" name="food" value="{{data.food}}"><br><br>
+    PRICE :   <input type="text" name="price" value="{{data.price}}"><br><br>
+    DESCRIPTION : <input type="text" name="description" value="{{data.description}}"><br><br>
+    CATEGORY: <input type="text" name="category" value="{{data.category}}"><br><br>
+        <input type="submit" name="EDIT" value="UPDATE">
+    </div>
+</form>
+</body>
+</html>

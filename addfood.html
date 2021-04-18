@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addfood</title>
+</head>
+<body>
+<form action="afood" method="post" enctype="multipart/form-data">
+     {% csrf_token %}
+    <div style="text-align:center">
+        <h1>ANNA'S RESTURANT</h1>
+    ADD FOOD  :    <input type="text" name="food"><br><br>
+    PRICE :   <input type="text" name="price"><br><br>
+    DESCRIPTION :   <input type="text" name="description"><br><br>
+    CATEGORY: <input type="text" name="category"><br><br>
+        PHOTO:   <input type="file" name="file"><br><br>
+        <input type="submit" name="ADD" value="ADD">
+    </div>
+</form>
+</body>
+</html>
